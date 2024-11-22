@@ -7,11 +7,12 @@ terraform {
   }
   backend "s3" {
     bucket = "varadaws78s-remote-state" 
-    key    = "expense-dev-backend"
+    key    = "expense-dev-backend-deploy"
     region = "us-east-1"
     dynamodb_table = "varadaws78s-locking"
   }
-}
+  
+} 
 
 #provide authentication here
 provider "aws" {
